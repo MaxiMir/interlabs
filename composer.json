@@ -1,0 +1,19 @@
+{
+  "name": "maximir/interlabs",
+  "description": "test interlabs",
+  "type": "project",
+  "authors": [
+    {
+      "name": "MaxiM",
+      "email": "mmirrev@mail.ru"
+    }
+  ],
+  "require": {
+    "twig/twig": " 1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src"
+    }
+  }
+}

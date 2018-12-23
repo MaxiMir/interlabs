@@ -1,0 +1,76 @@
+{% include 'header.twig' %}
+    <body>
+
+        <main role="main">
+            <div class="container h-100">
+                <div class="row align-items-center h-100 my-5">
+                    <div class="col-12">
+                        <h1>USERS</h1>
+						<p id="main-message"></p>
+
+                        <div id="users_info">
+							<div class="table-responsive">
+								<table class="table table-dark table-striped" id="users_info-table">
+									<thead>
+										<tr>
+											<th>
+												<input type="checkbox" id="allCheckboxes" class="d-none">
+												<a href="javascript:void(0);" id="activateRedactor" title="Show checkbox">
+													<img src="{{ SITE_DIR }}/css/img/check.png" width="20px" alt="Show checkbox">
+												</a>
+											</th>
+											<th scope="col">
+												<a href="javascript:void(0);" data-orderBy="user_pos" class="btn disabled">
+													<img src="{{ SITE_DIR }}/css/img/arrow.png" alt="sort by pos" title="sort by pos" width="20px">
+													№
+												</a>
+
+											</th>
+											<th scope="col">
+												<a href="javascript:void(0);" data-orderBy="user_fullName" class="btn">
+													<img src="{{ SITE_DIR }}/css/img/arrow.png" alt="sort by full name" title="sort by full name" width="20px">
+													Full Name
+												</a>
+											</th>
+											<th scope="col">
+												<a href="javascript:void(0);" data-orderBy="user_email" class="btn">
+													<img src="{{ SITE_DIR }}/css/img/arrow.png" alt="sort by email" title="sort by email" width="20px">
+													Email
+												</a>
+											</th>
+											<th scope="col">
+												<a href="javascript:void(0);" data-orderBy="user_adress" class="btn">
+													<img src="{{ SITE_DIR }}/css/img/arrow.png" alt="sort by adress" title="sort by adress" width="20px">
+													Adress
+												</a>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% if usersData %}
+											{% include 'usersInfo.twig' %}
+										{% else %}
+											<tr>
+												<td colspan="6" class="text-warning">No users in DB</td>
+											</tr>
+										{% endif %}
+									</tbody>
+								</table>
+
+								<div id="controlPanel" class="d-none my-3">
+									<button type="submit" class="btn btn-outline-info" id="btnSort" disabled>Save sort</button>
+									<button type="submit" class="btn btn-outline-success" id="btnAdd">Add User</button>
+									{% if usersData %}
+										<button type="submit" class="btn btn-outline-danger" id="btnDel" disabled>Delete selected</button>
+									{% endif %}
+									<button type="submit" class="btn btn-outline-secondary" id="btnCancel">Cancel</button>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </body>
+{% include 'footer.twig' %}
