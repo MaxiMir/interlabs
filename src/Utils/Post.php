@@ -27,10 +27,10 @@
                 }
 
                 $processedValue = $cleanItem($sourceArr[$name]);
-                if (!$isEmptyElem($processedValue)) {
-                    $processedData[] = $processedValue;
-                } else {
+                if ($isEmptyElem($processedValue)) {
                     return false;
+                } else {
+                    $processedData[] = $processedValue;
                 }
             }
             return $processedData;
