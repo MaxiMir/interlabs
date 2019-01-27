@@ -22,6 +22,8 @@ class Select implements SelectInterface
         foreach ($sqlParts as $nameSqlPart => $valSqlPart) {
             if (in_array($nameSqlPart, $this->validSqlParts)) {
                 $this->$nameSqlPart = $valSqlPart;
+            } else {
+                die("Not valid SQL part: {$nameSqlPart}");
             }
         }
     }
