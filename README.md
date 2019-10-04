@@ -25,8 +25,6 @@
 
 !["Режим редактирования"](redactor.png)
 
-Посмотреть демо: http://slim.xppx.ru/interlabs/src/
-
 ## Логин и пароль админа: 
 maxiMir 
 fsocial
