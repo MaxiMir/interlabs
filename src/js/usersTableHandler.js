@@ -473,7 +473,7 @@ function generateScrollBlock() {
             }
         },
         append: $('<img>', {
-            src: '/interlabs/src/css/img/up-arrow.png',
+            src: 'css/img/up-arrow.png',
             alt: 'scroll up',
             title: 'scroll up',
             width: '35px'

@@ -8,9 +8,9 @@
     use \App\PDO\Select;
     use \App\Render\HtmlMarkup;
 
-    class CreateUser implements UtilsInterface
+    class CreateUser
     {
-        use JsonDecode;
+        use Json;
 
         private $table = 'users';
 
@@ -54,4 +54,4 @@
     }
 
     $createUser =  new CreateUser();
-    $createUser->echoJsonEncode();
+    $createUser->echoInEncode();

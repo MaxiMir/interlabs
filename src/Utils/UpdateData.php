@@ -10,7 +10,7 @@
 
     class UpdateData
     {
-        use JsonDecode;
+        use Json;
 
         private $table = 'users';
         private $validColumns = ['user_fullName', 'user_email', 'user_adress'];
@@ -52,4 +52,4 @@
     }
 
     $updateData =  new UpdateData();
-    $updateData->echoJsonEncode();
+    $updateData->echoInEncode();

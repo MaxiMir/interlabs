@@ -10,7 +10,7 @@
 
     class DeleteData
     {
-        use JsonDecode;
+        use Json;
 
         private $table = 'users';
 
@@ -44,4 +44,4 @@
     }
 
     $deleteData =  new DeleteData();
-    $deleteData->echoJsonEncode();
+    $deleteData->echoInEncode();

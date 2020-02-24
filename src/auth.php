@@ -1,8 +1,3 @@
-<?php
-    define('ROOT', $_SERVER['DOCUMENT_ROOT']);
-    define('SITE_DIR', str_replace(ROOT, '', __DIR__));
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="<?=SITE_DIR?>/css/theme.css">
+        <link rel="stylesheet" href="css/theme.css">
     </head>
 
     <body>
@@ -39,6 +34,6 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-        <script src="<?=SITE_DIR?>/js/formAuthHandler.js"></script>
+        <script src="js/formAuthHandler.js"></script>
     </body>
 </html>

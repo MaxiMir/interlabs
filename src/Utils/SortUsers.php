@@ -9,7 +9,7 @@
 
     class SortUsers
     {
-        use JsonDecode;
+        use Json;
 
         private $table = 'users';
 
@@ -35,4 +35,4 @@
     }
 
     $sortUsers =  new SortUsers();
-    $sortUsers->echoJsonEncode();
+    $sortUsers->echoInEncode();

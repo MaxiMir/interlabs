@@ -28,7 +28,7 @@ $(function () {
                     if (data['result'] === 'error') {
                         showThenHideMsg(data['msg']);
                     } else {
-                        $(location).attr('href', '/interlabs/src/');
+                        $(location).attr('href', 'index.php');
                     }
                 },
                 error: function (xhr, ajaxOptions, thrownError) {

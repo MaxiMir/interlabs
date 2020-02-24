@@ -9,11 +9,11 @@
 
             $cleanItem = function ($value) {
                 if (!is_array($value)) {
-                    return  htmlspecialchars(trim($value));
+                    return htmlspecialchars(trim($value));
                 }
 
                 return array_map(function($item) {
-                    return  htmlspecialchars(trim($item));
+                    return htmlspecialchars(trim($item));
                 }, $value);
             };
 

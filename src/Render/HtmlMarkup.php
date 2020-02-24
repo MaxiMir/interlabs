@@ -16,7 +16,7 @@
 
             try {
                 Twig_Autoloader::register();
-                $loader = new Twig_Loader_Filesystem($_SERVER['DOCUMENT_ROOT'] . '/interlabs/src/views');
+                $loader = new Twig_Loader_Filesystem(realpath($_SERVER['DOCUMENT_ROOT'] . '/testovoeZadanie1/src/views'));
                 $twig = new Twig_Environment($loader);
                 $template = $twig->loadTemplate($tmpl);
                 return $template->render($data);

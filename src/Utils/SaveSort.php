@@ -6,9 +6,9 @@
 
     use \App\PDO\Update;
 
-    class SaveSort implements UtilsInterface
+    class SaveSort
     {
-        use JsonDecode;
+        use Json;
 
         private $table = 'users';
         private $validColumns = ['ids'];
@@ -51,4 +51,4 @@
     }
 
     $saveSort =  new SaveSort();
-    $saveSort->echoJsonEncode();
+    $saveSort->echoInEncode();
